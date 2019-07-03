@@ -41,7 +41,7 @@
             peer-did = "did:peer:" version "-" idstring<br>
             version = "1"<br>
             idstring = multibase multihash<br>
-            multibase = "F"</code> <span style="color:green"># See hex in
+            multibase = "f"</code> <span style="color:green"># See hex in
                 <a target="multibase" href="https://github.com/multiformats/multibase">multibase spec</a></span><br>
         <code>multihash = "1220" restofhash</code> <span style="color:green"># See sha256+hex in
                 <a target="multihash" href="https://multiformats.io/multihash/">multihash spec</a></span>
@@ -58,7 +58,7 @@
     <p>The multihash value is preceded by a <a target="multibase"
             href="https://github.com/multiformats/multibase">multibase prefix</a> that tells how to
         interpret the multihash that follows. Since the multihash value is hex in
-        this version of the spec, <code>multibase</code> is always "F" today; if the
+        this version of the spec, <code>multibase</code> is always "f" today; if the
         multihash variant changes in the future, <code>multibase</code> may change, too.
     <p>
     <p class="note">Peer DIDs MUST be compared according to whatever case-sensitivity is implied by the
@@ -100,11 +100,11 @@
     <h3>Examples</h3>
     <p>A convenient regex to match <code>peer</code> DIDs is:</p>
     <blockquote>
-        <code>^did:peer:1-F1220[a-fA-F0-9]{8,40}$</code>
+        <code>^did:peer:1-f1220[a-f0-9]{8,40}$</code>
     </blockquote>
     <p>A valid <code>peer</code> DID might be:</p>
     <blockquote>
-        <code>did:peer:1-F1220479cbc07c3f991725836a3aa2a581ca2029198aa420b9d99bc0e131d9f3e2cbe</code>
+        <code>did:peer:1-f1220479cbc07c3f991725836a3aa2a581ca2029198aa420b9d99bc0e131d9f3e2cbe</code>
     </blockquote>
     <p>Examples of a DID doc for this method are explored in greater detail <a href="#diddocs">below</a>.</p>
 </section>
